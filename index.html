@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playtation Landing Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.2.9/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img class="logo" src="images/logoSonyWhite.png" alt="Logo Sony Playstation"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Info</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Hardware</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#"><input type="button" value="Sign In"></a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's Time to Play <br> This is the new <strong>DualSense 5</strong><span>.</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus <br> quod sit quam sequi, iste numquam odit pariatur</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/DualSense PS5 PNG.png" alt="Dualsense 5 white" class="dualsense">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img id="whiteCircle" src="images/DualSense PS5 PNG.png" alt="white circle" onclick="imgSlider('images/DualSense PS5 PNG.png')"></li>
+            <li><img id="blackCircle" src="images/1611938801-playstation-2-edition.png" alt="black circle" onclick="imgSlider('images/1611938801-playstation-2-edition.png')"></li>
+        </ul>
+        <!-- <ul class="thumb">
+            <li><img id="whiteCircle" src="images/whitecircle-removebg-preview-gimp.png" alt="white circle" onclick="imgSlider('images/DualSense PS5 PNG.png')"></li>
+            <li><img id="blackCircle" src="images/14023251461557749681-128.png" alt="black circle" onclick="imgSlider('images/1611938801-playstation-2-edition.png')"></li>
+        </ul> -->
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.dualsense').src = anything
+        }
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
